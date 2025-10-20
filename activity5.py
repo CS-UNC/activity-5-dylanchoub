@@ -21,8 +21,16 @@ def more_than_20(file):
     return words
 print(more_than_20("CROSSWD.txt"))
 
-# def has_no_e(word):
-#   for letter in word:
-#     if letter == 'e' or letter == 'E':
-#       return False
-#   return True
+def has_no_e(word):
+  for letter in word:
+    if letter == 'e' or letter == 'E':
+      return False
+  return True
+print(has_no_e("CROSSWD.txt"))
+
+def uses_only(word, letters):
+    for char in word:
+        if char not in letters:
+            return False
+    return True
+
