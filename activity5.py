@@ -34,3 +34,12 @@ def uses_only(word, letters):
             return False
     return True
 
+def all_uses_only(file, letters):
+    result = []
+    with open(file) as f:
+        for line in f:
+            word = line.strip()
+            if uses_only(word, letters):
+                result.append(word)
+    return result
+
